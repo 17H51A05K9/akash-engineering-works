@@ -2,13 +2,15 @@ import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
-import splitImage from "../public/img/split.png"
+import AELogo from "../public/img/AEWLogo.png"
 
 const Navbar = () => {
   const navigation = [
     { name: "Home", link: "/" },
-    { name: "Expenses", link: "/myexpenses" },
-    { name: "Split", link: "/expenseSplit" }
+    { name: "Products", link: "/products" },
+    { name: "Brochures", link: "/Brochures" },
+    { name: "About", link: "/about" },
+    { name: "Contact Us", link: "/contact" }
   ];
 
   return (
@@ -23,14 +25,14 @@ const Navbar = () => {
                   <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
                     <span>
                       <Image
-                        src={splitImage}
+                        src={AELogo}
                         alt="N"
-                        width="32"
-                        height="32"
-                        className="w-8"
+                        width="56"
+                        height="56"
+                        className="rounded-lg"
                       />
                     </span>
-                    <span>Split Expenses</span>
+                    <span className="text-black dark:text-white">Akash Engineering Works</span>
                   </span>
                 </Link>
 

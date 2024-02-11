@@ -2,15 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import Container from "./container";
-import splitImage from "../public/img/split.png"
+import AELogo from "../public/img/AEWLogo.png"
 
 export default function Footer() {
   const navigation = [
-    "Product",
-    "Features",
-    "Pricing",
-    "Company",
-    "Blog",
+    { name: "Home", Link: "/" },
+    { name: "Products", Link: "/products" },
+    { name: "Certificates", Link: "/Certificates" },
+    { name: "Contact us", Link: "/contact" },
+    { name: "About", Link: "/about" }
   ];
   const legal = ["Terms", "Privacy", "Legal"];
   return (
@@ -21,21 +21,22 @@ export default function Footer() {
             <div>
               {" "}
               <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
-                    <Image
-                      src={splitImage}
-                      alt="N"
-                      width="32"
-                      height="32"
-                      className="w-8"
-                    />
-                  <span>Split-Expenses</span>
+                <Image
+                  src={AELogo}
+                  alt="N"
+                  width="32"
+                  height="32"
+                  className="w-8"
+                />
+                <span>Akash Engineering Works</span>
               </Link>
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Nextly is a free landing page & marketing website
-              template for startups and indie projects. Its built with
-              Next.js & TailwindCSS. And its completely open-source.
+              CSS Garden, KLR Venture,<br/>
+              Medchal, Telangana - 501401<br/>
+              Email: akashengineeringworks1@gmail.com<br/>
+              Phone: +91 +91 9603411571
             </div>
 
             <div className="mt-5">
@@ -44,12 +45,12 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener"
                 className="relative block w-44">
-                <Image
+                {/* <Image
                   src="/img/vercel.svg"
                   alt="Powered by Vercel"
                   width="212"
                   height="44"
-                />
+                /> */}
               </a>
             </div>
           </div>
@@ -57,8 +58,8 @@ export default function Footer() {
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {navigation.map((item, index) => (
-                <Link key={index} href="/" className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">                 
-                    {item}
+                <Link key={index} href={item.Link} className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">
+                  {item.name}
                 </Link>
               ))}
             </div>
@@ -66,8 +67,8 @@ export default function Footer() {
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {legal.map((item, index) => (
-                <Link key={index} href="/" className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">      
-                    {item}
+                <Link key={index} href="/" className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">
+                  {item}
                 </Link>
               ))}
             </div>
@@ -108,20 +109,8 @@ export default function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
-          <a
-            href="https://web3templates.com/"
-            target="_blank"
-            rel="noopener">
-            Web3Templates.
-          </a>{" "}
-          Illustrations from{" "}
-          <a
-            href="https://www.glazestock.com/"
-            target="_blank"
-            rel="noopener ">
-            Glazestock
-          </a>
+          Copyright © {new Date().getFullYear()}. Made with ♥ by {"G Praveen Kumar"}
+          
         </div>
       </Container>
       {/* Do not remove this */}

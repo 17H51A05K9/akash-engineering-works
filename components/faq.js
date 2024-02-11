@@ -35,22 +35,22 @@ const Faq = () => {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: "What is the maximum boom reach?",
+    answer: "It totally depends on customers need but currently we have manufactured boom which has a reach of about 15m.",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "What is the maximum weight of Stationary Crane?",
+    answer: "It weigh around 20T.",
   },
   {
-    question: "What is your refund policy? ",
+    question: "How many fingers are there in a Grapple",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
-  },
+      "There are 5 Fingers."
+    },
   {
-    question: "Do you offer technical support? ",
+    question: "What is the Warranty period for our products?",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "1 Year.",
   },
 ];
 

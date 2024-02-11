@@ -1,26 +1,26 @@
-import About from "../components/aboutcomp";
+
 import Head from "next/head";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import PopupWidget from "../components/popupWidget";
-import MyExpenses  from "../components/expenses";
+import About from "../components/AboutComp";
 
 export default function AboutPage() {
     return(
         <>
         <>
         <Head>
-          <title>Split-Expenses</title>
+          <title>About</title>
           <meta
             name="description"
-            content="Split Expenses app is used for sharing the expenses with our friends."
+            content="Akash Engineering Works"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navbar />
         <About/>
         <Footer />
-        <PopupWidget />
+        {/* <PopupWidget /> */}
         </>
         </>
     );
